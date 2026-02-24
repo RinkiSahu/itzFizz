@@ -1,9 +1,9 @@
-import { RefObject } from "react";
+import type { RefObject } from "react";
 
 interface Props {
-  carRef: RefObject<HTMLImageElement>;
-  trailRef: RefObject<HTMLDivElement>;
-  valueTextRef: RefObject<HTMLDivElement>;
+  carRef: RefObject<HTMLImageElement | null>;
+  trailRef: RefObject<HTMLDivElement | null>;
+  valueTextRef: RefObject<HTMLDivElement | null>;
 }
 
 const RoadSection = ({ carRef, trailRef, valueTextRef }: Props) => {

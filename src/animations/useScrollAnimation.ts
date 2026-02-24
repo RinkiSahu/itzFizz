@@ -1,15 +1,16 @@
-import { RefObject, useEffect } from "react";
+import { useEffect } from "react";
+import type { RefObject } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface Props {
-  sectionRef: RefObject<HTMLDivElement>;
-  trackRef: RefObject<HTMLDivElement>;
-  carRef: RefObject<HTMLImageElement>;
-  trailRef: RefObject<HTMLDivElement>;
-  valueTextRef: RefObject<HTMLDivElement>;
+  sectionRef: RefObject<HTMLDivElement | null>;
+  trackRef: RefObject<HTMLDivElement | null>;
+  carRef: RefObject<HTMLImageElement | null>;
+  trailRef: RefObject<HTMLDivElement | null>;
+  valueTextRef: RefObject<HTMLDivElement | null>;
 }
 
 export const useScrollAnimation = ({
